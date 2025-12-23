@@ -1,0 +1,15 @@
+# Copy this file to .env and fill in your values
+
+# Laravel API Configuration
+LARAVEL_API_URL=http://localhost:8000/api
+
+# LLM API Configuration (OpenAI)
+# Get your API key from: https://platform.openai.com/api-keys
+LLM_API_KEY=your_openai_api_key_here
+LLM_API_URL=https://api.openai.com/v1/chat/completions
+LLM_MODEL=gpt-4
+
+# Alternative: Use other LLM providers
+# For Anthropic Claude:
+# LLM_API_URL=https://api.anthropic.com/v1/messages
+# LLM_MODEL=claude-3-opus-20240229

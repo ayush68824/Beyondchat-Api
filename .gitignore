@@ -1,0 +1,31 @@
+# Laravel
+backend/laravel-api/vendor/
+backend/laravel-api/.env
+backend/laravel-api/storage/*.key
+backend/laravel-api/bootstrap/cache/*
+backend/laravel-api/storage/framework/cache/*
+backend/laravel-api/storage/framework/sessions/*
+backend/laravel-api/storage/framework/views/*
+backend/laravel-api/storage/logs/*
+backend/laravel-api/database/*.sqlite
+backend/laravel-api/database/*.sqlite-journal
+
+# Node
+backend/nodejs-script/node_modules/
+backend/nodejs-script/.env
+*.log
+
+# Python
+backend/scraper/__pycache__/
+backend/scraper/*.pyc
+backend/scraper/scraped_articles.json
+
+# OS
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+
+# IDE
+.vscode/
+.idea/

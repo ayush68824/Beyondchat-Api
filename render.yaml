@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: beyondchat-api
+    runtime: docker
+    region: oregon
+    plan: starter
+    rootDir: backend/laravel-api
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: false
+      - key: LOG_LEVEL
+        value: error
+      - key: APP_KEY
+        generateValue: true
+      - key: DB_CONNECTION
+        sync: false
+      - key: DB_HOST
+        sync: false
+      - key: DB_PORT
+        sync: false
+      - key: DB_DATABASE
+        sync: false
+      - key: DB_USERNAME
+        sync: false
+      - key: DB_PASSWORD
+        sync: false
+
