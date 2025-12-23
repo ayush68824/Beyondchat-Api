@@ -26,7 +26,7 @@ class ArticleController extends Controller
         }
 
         $perPage = $request->get('per_page', 15);
-        $articles = $query->orderBy('date', 'desc')
+        $articles = $query->orderByRaw('COALESCE(date, created_at) DESC')
                          ->orderBy('created_at', 'desc')
                          ->paginate($perPage);
 
@@ -139,7 +139,7 @@ class ArticleController extends Controller
     public function latest(): JsonResponse
     {
         $article = Article::where('is_updated', false)
-                          ->orderBy('date', 'desc')
+                          ->orderByRaw('COALESCE(date, created_at) DESC')
                           ->orderBy('created_at', 'desc')
                           ->first();
 
